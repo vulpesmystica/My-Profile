@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>プロフィール | Webアプリケーションエンジニアを目指して</title>
+  <style>
+    body { margin: 0;
+      padding: 20px;
+      font-family: sans-serif;
+      line-height: 1.7;
+      color: #eee;
+      background: #201735;}
+
+    header, section {max-width: 700px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #30234d;
+      border-radius: 10px;}
+
+    header { text-align: center; }
+    h1, h2 { color: #d8c2ff; }
+    a, button { color: #e3d4ff; }
+    a { margin-right: 12px; }
+
+    button { padding: 8px 12px;
+      background: #6544a5;
+      border: 0;
+      border-radius: 6px;
+      cursor: pointer;}
+
+    #message { color: #e3d4ff; }
+  </style>
+</head>
+<body>
+  <header id="top">
+    <h1>考えて、工夫して、成長する。</h1>
+    <p>Webアプリケーションエンジニアを目指す大学生</p>
+    <a href="#about">プロフィール</a>
+    <a href="#history">経験</a>
+    <a href="#study">学習中</a>
+    <a href="#goal">目標</a>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>プロフィール</h2>
+      <p>大学で経済学を学びながら、独学でHTML・CSSを学習しています。Webページを制作しながら、構造やデザインへの理解を深めています。</p>
+    </section>
+
+    <section id="history">
+      <h2>これまでの経験</h2>
+      <h3>将棋：三段に到達</h3>
+      <p>約2年半、動画で学び、対局を振り返りながら練習を重ねました。失敗の原因を考え、改善を繰り返しました。</p>
+      <h3>部活動</h3>
+      <p>中学ではソフトテニス部の副部長を経験し、高校ではバドミントン部に所属しました。</p>
+    </section>
+
+    <section id="study">
+      <h2>現在学習していること</h2>
+      <p><strong>HTML：</strong>見出し、文章、リンクなど、ページの構造を作る方法。</p>
+      <p><strong>CSS：</strong>色、余白、文字の大きさなど、見た目を整える方法。</p>
+      <button id="messageButton">メッセージを見る</button>
+      <p id="message" hidden>プログラムが思いどおりに動いた瞬間に、楽しさを感じます。</p>
+    </section>
+
+    <section id="goal">
+      <h2>これからの目標</h2>
+      <ol>
+        <li>HTML・CSSの基礎を身につける</li>
+        <li>JavaScriptを学び、Webアプリケーションを作る</li>
+        <li>使う人にとって便利なサービスを開発する</li>
+      </ol>
+      <a href="#top">トップへ戻る</a>
+    </section>
+  </main>
+
+  <script>
+    const button = document.getElementById("messageButton");
+    const message = document.getElementById("message");
+
+    button.addEventListener("click", function() 
+    {message.hidden = !message.hidden;
+      button.textContent = message.hidden ? "メッセージを見る" : "閉じる"; });
+  </script>
+</body>
+</html>
